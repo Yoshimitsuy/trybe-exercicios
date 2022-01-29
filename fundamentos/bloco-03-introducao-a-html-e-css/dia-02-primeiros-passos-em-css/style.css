@@ -1,0 +1,36 @@
+h1 {
+        
+    background-color: black;
+    color: orange;
+    font-size: 65px;
+    font-family: sans-serif;
+}
+
+ul {
+    background-color: plum;
+}
+
+p {
+    font-weight: 600;
+    font-size: 3em;
+}
+
+body {
+    font-size: 16px;
+}
+
+.mudarCor {
+    background-color: salmon;
+}
+
+#amarelo {
+    background-color: yellow;
+}
+
+#vermelho {
+    background-color: red;
+}
+
+#marrom {
+    background-color: rgba(128, 54, 54, 0.918);
+}
