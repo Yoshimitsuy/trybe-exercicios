@@ -1,0 +1,59 @@
+
+ol li {
+    background-color: yellow;
+    
+}
+
+ol li:nth-child(even) {
+    color: green;
+    
+}
+
+ol li:nth-child(odd) {
+    text-transform: uppercase;
+}
+
+h1, h2 {
+    color: red;
+    font-size: 40px;
+    border: 1px solid black;
+}
+
+li {
+    font-size: 20px;
+}
+
+li em {
+    font-weight: bold;
+}
+
+ul li.ling {
+    background-color: violet;
+}
+
+#pink {
+    background-color: violet;
+} 
+
+#ling li:nth-child( -n + 3 ) {
+    
+    color: blue;
+}
+
+#ally li :hover {
+    font-weight: bold;
+}
+
+
+#ally li a[href*="stackoverflow"] {
+    color: orange;
+}
+
+#ally li a[href*="w3schools"] {
+    color: green;
+}
+
+/* só copiar para os outros
+
+
+    

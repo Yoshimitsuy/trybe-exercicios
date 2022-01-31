@@ -1,0 +1,21 @@
+
+h1, p{
+text-align: center;
+}
+
+li:hover {
+    background-color: purple;
+}
+
+li:active {
+    color: white;
+}
+
+h1:hover {
+    background-color: red;
+    /* só teste */
+}
+
+li {
+    list-style: none;
+}
