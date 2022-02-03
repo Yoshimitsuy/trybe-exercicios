@@ -55,7 +55,7 @@ if ( currentHour >= 11 && currentHour < 14) {
 if ( currentHour >= 4 && currentHour < 11) {
     console.log (message = "Hmmm, cheiro de café recém passado")
 } 
-*/
+
 
 const weekDay = "domingo";
 
@@ -65,4 +65,24 @@ if ( weekDay === "segunda" || weekDay ==="terça" ||
 }
 else {
     console.log ( "FINALMENTE ! Descanso merecido UwU")
+}
+*/
+
+let candidato = "rep";
+
+switch (candidato) {
+    case "apr" :
+    console.log ("aprovado");
+    break;
+    
+    case "lis" :
+    console.log ("lista");
+    break;
+
+    case "rep" :
+    console.log ("reprovado");
+    break;
+    
+    default:
+    console.log ("não se aplica");
 }
