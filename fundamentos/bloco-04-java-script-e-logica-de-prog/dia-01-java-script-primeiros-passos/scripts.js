@@ -33,7 +33,8 @@ if (nota < 80 && nota >= 60) {
 if (nota < 60) { 
     console.log ("Você está reprovado")
 }
-*/ 
+
+ 
 
 const currentHour = 11;
 
@@ -53,4 +54,15 @@ if ( currentHour >= 11 && currentHour < 14) {
 }
 if ( currentHour >= 4 && currentHour < 11) {
     console.log (message = "Hmmm, cheiro de café recém passado")
+} 
+*/
+
+const weekDay = "domingo";
+
+if ( weekDay === "segunda" || weekDay ==="terça" || 
+    weekDay === "quarta" || weekDay === "quinta" || weekDay === "sexta") {
+    console.log ( "Oba, mais um dia de aprendizado na Trybe >:D")
+}
+else {
+    console.log ( "FINALMENTE ! Descanso merecido UwU")
 }
