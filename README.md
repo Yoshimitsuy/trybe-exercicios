@@ -1,4 +1,4 @@
-# Trybe R
+# Trybe
 
 Este repositório contém todas as atividades de aprendizagem desenvolvidas por _[Rafael Yoshimitsuy Lacana](https://www.linkedin.com/in/rafael-lacana-833758124/)_ enquanto estudava na [Trybe](https://www.betrybe.com/) :rocket:
 
