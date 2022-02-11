@@ -1,0 +1,58 @@
+
+div:hover {
+display: inline-block;
+width: auto;
+height: auto;
+background-color: yellow;
+padding: 5px;
+border: 2px solid blue;
+
+}
+
+h1:hover {
+    background-color: brown;
+}
+
+#div1 h3{
+
+   background-color: rgb(10, 10, 105);
+   color: aliceblue;
+   font-family: monospace;
+   
+}
+
+#div2 h3{
+    background-color: crimson;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#div3 h3{
+    background-color: yellow ;
+    text-align: center;
+    height: 100px;
+    
+    
+    
+}
+
+#div4 h3 {
+    background-color: rgb(54, 3, 3);
+    color: aliceblue;
+    border-radius: 100px;
+
+}
+
+#div5 h3{
+    background-color: rgb(194, 90, 107);
+    border-top-left-radius: 80px ;
+    
+}
+
+div:nth-child(odd) {
+    font-style: italic;
+
+}
+
+h3 {
+    display: inline-block;
+}
