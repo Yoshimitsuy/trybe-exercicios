@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 5.2</title>
+    <style>
+      section {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+
+      .main-content .left-content {
+        background-color: green;
+        width: 60%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .main-content .left-content .small-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+      }
+
+      .main-content .right-content {
+        background-color: blue;
+        width: 60%;
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .main-content .description {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      // COLOQUE SEU CÓDIGO AQUI
+      //1
+      const tagH1 = document.createElement('h1');
+      tagH1.innerText = 'Exercício 5.2 - JavaScript DOM';
+      document.body.appendChild(tagH1);
+
+      //2
+      const tagMain = document.createElement('main');
+      tagMain.className = 'main-content';
+      document.body.appendChild(tagMain);
+
+      //3
+      const tagSection = document.createElement('section');
+      tagSection.className = 'center-content';
+      tagMain.appendChild(tagSection);
+
+      //4
+      const tagParag = document.createElement('p');
+      tagParag.innerText = 'quero sashimi';
+      tagSection.appendChild(tagParag);
+
+      //5
+      const tagSectionLeft = document.createElement('section');
+      tagSectionLeft.className = 'left-content';
+      tagMain.appendChild(tagSectionLeft);
+
+      //6
+      const tagSectionRight = document.createElement('section');
+      tagSectionRight.className = 'right-content';
+      tagMain.appendChild(tagSectionRight);
+
+      //7
+      const photoDiv = document.createElement('img');
+      photoDiv.className = 'small-image';
+      photoDiv.src = 'https://picsum.photos/200';
+      tagSectionLeft.appendChild(photoDiv);
+
+      //8
+      const uList = document.createElement('ul');
+      tagSectionRight.appendChild(uList);
+
+      const arrayList = ['um', 'dois', 'três', 'quatro', 'cinco',
+      'seis', 'sete', 'oito', 'nove', 'dez'];
+
+      for (let n in arrayList) {
+        const liList = document.createElement('li');
+        liList.innerHTML = arrayList[n];
+        uList.appendChild(liList);
+      }
+
+      //9
+      for (let index = 0; index < 3; index += 1) {
+          const tagH3 = document.createElement('h3');
+          tagMain.appendChild(tagH3);
+          tagH3.innerText = 'cheidissono'
+      }
+      
+      //segunda parte
+      //1
+      const classH1 = document.querySelector('h1');
+      classH1.className = 'title';
+
+      //2
+      const classH3 = document.getElementsByTagName('h3');
+      for (let index = 0; index < 3; index += 1) {
+      classH3[index].className = 'description';
+      }
+
+      //3
+      const removeLeftSection = document.getElementsByClassName('left-content')[0];
+      tagMain.removeChild(removeLeftSection);
+
+      //4
+      const centerRightSection = document.getElementsByClassName('right-content')[0];
+      centerRightSection.style.marginRight = 'auto';
+
+      //5
+      const changeFatherColor = document.getElementsByClassName('center-content')[0];
+      changeFatherColor.parentNode.style.backgroundColor = 'green';
+      
+      //6
+      uList.lastChild.remove();
+      uList.lastChild.remove();
+      
+
+
+
+    
+    </script>
+  </body>
+</html>
