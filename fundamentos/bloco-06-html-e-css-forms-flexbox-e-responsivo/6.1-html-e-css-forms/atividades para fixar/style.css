@@ -1,0 +1,67 @@
+.button-submit {
+  margin-top: 1px;
+  border-radius: 8px;
+  border: 2px solid blue;
+}
+
+.area-text {
+  resize: none;
+  background-color: rgb(255, 255, 255);
+  border: 2px solid blue;
+  margin-bottom: 1%;
+}
+
+#input-user {
+  border: 2px solid blue;
+  border-radius: 8px;
+
+}
+
+#input-pass {
+  border: 2px solid blue;
+  border-radius: 8px;
+}
+
+.texto-info {
+  border-bottom: 3px solid grey;
+  margin-right: 10px;
+  
+}
+
+body {
+  margin: 10px;
+}
+
+h1 {
+  border-bottom: 3px solid blue;
+  color: blue;
+  padding: 3px;
+  margin-right: 250px;
+}
+
+main {
+  background-color: rgb(232, 232, 240);
+  border: 1px solid blue;
+  padding: 10px;
+  font-size: 14px;
+} 
+
+.footer {
+  background-color: rgb(170, 170, 231);
+  padding: 2px;
+  border: 2px solid blue;
+  margin-top: 7px;
+}
+
+.fav-sport {
+  border: 2px solid blue;
+  height: 80px;
+  width: 300px;
+  resize: none;
+}
+
+#parag-footer {
+  margin-left: 80%;
+  padding-left: 10px;
+  font-size: 14px;
+}
