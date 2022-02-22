@@ -1,0 +1,72 @@
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>exercício 6.1</h1>
+  <form action="">
+    <label for="input-name">Nome :
+      <input type="text" id="input-name" autocomplete="off" name="full-name" size="40" maxlength="40" minlength="10"
+        placeholder="digite seu nome" required>
+    </label>
+    <br><br>
+    <label for="input-email">E-mail :
+      <input type="email" id="input-email" autocomplete="off" name="email" size="40" maxlength="50" minlength="10"
+        placeholder="digite seu nome" required>
+    </label>
+    <br><br>
+    <label for="lugar-1">Nome :
+      <input type="radio" id="lugar-1" name="lugares" value="city"> Cidade
+    </label>
+
+    <label for="lugar-2">
+      <input type="radio" id="lugar-2" name="lugares" value="camp"> Campo
+    </label>
+
+    <label for="lugar-3">
+      <input type="radio" id="lugar-3" name="lugares" value="beach"> Praia
+    </label>
+
+    <label for="lugar-4">
+      <input type="radio" id="lugar-4" name="lugares" value="mount"> Montanha
+    </label>
+    <br><br>
+    <label for="text-area" placeholder="conta aqui sua história">
+      Por que vocẽ deveria ser a pessoa desenvolvedora a ganhar o concurso TrybeTrip ?
+      <br>
+      <textarea name="text-area" id="text-area" cols="30" rows="10" maxlength="500"></textarea>
+    </label>
+    <br><br>
+    <label for="data">
+      <input type="date" name="data" id="input-data">
+    </label>
+    <br>
+    <label for="check-1">
+      <br>
+      <input type="checkbox" id="check-1" name="check1">
+      Gostaria de receber outras incríveis oportunidades oferecidas pela Trybe ?
+    </label>
+    <br>
+    <label for="check-2">
+      <br>
+      <input type="checkbox" id="check-2" name="check2">
+      Concordo que as imagens das minhas férias poderão ser usadas na divulgação de concursos futuros.
+    </label>
+    <br>
+    
+    <button type="submit" id="buttonSubmit"> enviar </button>
+    <button type="button" id="clearSubmit"> limpas</button>
+    
+
+
+
+  </form>
+<script src="script.js"></script>
+</body>
+
+</html>
