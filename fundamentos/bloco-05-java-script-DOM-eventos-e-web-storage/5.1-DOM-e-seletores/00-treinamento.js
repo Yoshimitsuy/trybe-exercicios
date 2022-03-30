@@ -1,7 +1,7 @@
 const titleH1 = document.getElementsByTagName('h1')[0];
 
 titleH1.style.color = "green";
-titleH1.style.backgroundColor = 'rgb(149, 150, 200';
+titleH1.style.backgroundColor = 'rgb(149, 150, 200)';
 titleH1.style.margin = '1px'
 titleH1.style.padding = '1px'
 
