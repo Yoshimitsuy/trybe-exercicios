@@ -35,16 +35,17 @@ rightSide.innerText = 'lado direito';
 makeMain.appendChild(rightSide);
 
 // 7. Adicione uma imagem com src configurado para o valor https://picsum.photos/200 
-// e classe small-image . Esse elemento deve ser filho do section criado no passo 5;
+//    e classe small-image . Esse elemento deve ser filho do section criado no passo 5;
 const image = document.createElement('img');
 image.className = 'small-image';
 image.src = 'https://picsum.photos/200 ';
 leftSide.appendChild(image);
 
 // 8. Adicione uma lista não ordenada com os valores de 1 a 10 por extenso, 
-// ou seja, um , dois , três , ... como valores da lista. 
-//Essa lista deve ser filha do section criado no passo 6;
+//    ou seja, um , dois , três , ... como valores da lista. 
+//    Essa lista deve ser filha do section criado no passo 6;
 const UnList = document.createElement('ul');
+UnList.className = 'unorder-list';
 const arrayNumbers = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j'];
 
 for (let i in arrayNumbers) {
@@ -64,10 +65,28 @@ for ( let i = 0; i < 3; i += 1 ) {
 // PARTE 2
 
 // 1. Adicione a classe title na tag h1 criada;
-
+makeH1.className = 'tag-h1';
 
 // 2. Adicione a classe description nas 3 tags h3 criadas;
-// 3. Remova a section criado no passo 5 (aquele que possui a classe left-content ). Utilize a função .removeChild() ;
-// 4. Centralize a section criado no passo 6 (aquele que possui a classe right-content ). Dica: para centralizar, basta configurar o margin-right: auto da section ;
-// 5. Troque a cor de fundo do elemento pai da section criada no passo 3 (aquela que possui a classe center-content ) para a cor verde;
+for ( let i = 0; i < 3; i += 1 ) {
+  const takeH3 = document.querySelector('h3');
+  makeMain.appendChild(takeH3);
+  takeH3.className = 'description';
+};  
+
+// 3. Remova a section criado no passo 5 (aquele que possui a classe left-content ). 
+//    Utilize a função .removeChild() ;
+makeMain.removeChild(leftSide);
+
+// 4. Centralize a section criado no passo 6 (aquele que possui a classe right-content ). 
+//    Dica: para centralizar, basta configurar o margin-right: auto da section ;
+rightSide.style.marginRight = 'auto';
+
+// 5. Troque a cor de fundo do elemento pai da section criada no passo 3 
+//    (aquela que possui a classe center-content ) para a cor verde;
+makeSection.style.backgroundColor = 'green';
+
 // 6. Remova os dois últimos elementos ( nove e dez ) da lista criada no passo 8.
+// const takeUnList = document.querySelectorAll('ul');
+UnList.lastChild.remove();
+UnList.lastChild.remove();
