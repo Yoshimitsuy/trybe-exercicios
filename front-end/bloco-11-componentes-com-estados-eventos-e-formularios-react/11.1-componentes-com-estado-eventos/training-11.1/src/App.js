@@ -1,4 +1,4 @@
-import './App.css';
+import './App.css'; // rafael yoshimitsuy
 import { Component } from 'react'; //forma mais simples de importar o react e o component
 
 class App extends Component {
