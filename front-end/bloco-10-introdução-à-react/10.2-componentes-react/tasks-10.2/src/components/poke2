@@ -1,0 +1,25 @@
+import React from "react";
+
+class Poke2 extends React.Component {
+
+  render() {
+
+    const { pokemon: { name, type, averageWeight, image } } = this.props;
+    
+    return(
+      <div className='pokemon'>
+        <section>
+
+          <p>{name}</p>
+          <p>{type}</p>
+          <p>`Average Weight: ${averageWeight.value} ${averageWeight.measurementUnit}`</p>
+
+          <img src={image} alt={`${name} on screen`} />
+
+        </section>
+      </div>  
+    );
+  }
+}
+
+export default Poke2;
