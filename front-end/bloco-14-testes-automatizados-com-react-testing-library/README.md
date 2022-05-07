@@ -1,7 +1,7 @@
 <h1 align="center">Hi 👋, I'm Yoshmitisuy</h1>
 <h3 align="center">Bloco 12</h3>
 
-- 🔭 I’m currently working on **bloco 14**
+- 🔭 I’m currently working on **bloco 14 wp**
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
