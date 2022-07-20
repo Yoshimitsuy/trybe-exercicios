@@ -1,5 +1,5 @@
 <h1 align="center">Hi 👋, I'm Rafael Yoshimitsuy</h1>
-<h3 align="center">Bloco 21.1 - Back-end</h3>
+<h3 align="center">Bloco 21.2 - Back-end</h3>
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
