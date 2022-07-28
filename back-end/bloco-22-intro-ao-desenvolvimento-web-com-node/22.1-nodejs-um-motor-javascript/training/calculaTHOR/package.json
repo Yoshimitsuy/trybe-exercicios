@@ -1,0 +1,15 @@
+{
+  "name": "calculathor",
+  "version": "1.0.0",
+  "description": "faz conta",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "Rafael Yoshimitsuy",
+  "license": "ISC",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
+}
