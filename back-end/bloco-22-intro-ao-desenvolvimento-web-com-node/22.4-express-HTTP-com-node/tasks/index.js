@@ -1,10 +1,11 @@
 const express = require('express');
 const bodyparser = require('body-parser');
-const { getSimpsons, addSimpson } = require('./utility');
+const { getSimpsons, addSimpson, auth, generateToken } = require('./utility');
 
 const app = express();
 
 app.use(bodyparser.json());
+app.use(auth);
 
 // aqui a implementação \/
 
@@ -83,9 +84,25 @@ app.post('/simpsons', (req, res) => {
   return res.status(204).end();
   } catch (e) {
     return res.status(500).send(e);
-  }
-  ;
+  };
+});
 
+// bonus 2
+
+app.post('/signup', (req, res) => {
+  try {
+    const { email, password, firstName, phone } = req.body;
+  
+    if ([email, password, firstName, phone].includes(undefined)) {
+      return res.status(401).json({message: 'missing fields'});
+    }
+
+    const token = generateToken();
+
+    return res.status(200).json({ token });
+  } catch (error) {
+    return res.status(500).end();
+  }
 });
 
 app.listen(3000, () => console.log('porta 3000 ativa'));
