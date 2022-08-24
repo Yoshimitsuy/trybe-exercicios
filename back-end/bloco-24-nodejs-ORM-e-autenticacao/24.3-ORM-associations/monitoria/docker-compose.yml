@@ -1,0 +1,40 @@
+version: '3.9'
+
+services:
+  backend: 
+    build: ./
+    container_name: app-backend
+    ports:
+      - 3001:3000
+    depends_on:
+      db:
+        condition: service_healthy
+    environment: 
+      - APP_PORT=3001
+      - DB_USER=root
+      - DB_PASS=123456
+      - BD_HOST=db
+      - DB_PORT=3306
+      - DB_DATABASE=monitoria
+    
+    healthcheck:
+      ## Checando a saúde do container
+      test: [ "CMD", "lsof", "-t", "-i:3001" ]
+      timeout: 10s
+      retries: 5
+    
+    volumes:
+      - ./:/app-backend
+
+  db:
+    image: mysql:8.0.21
+    container_name: db
+    ports:
+      - 3002:3306
+    environment:
+      - MYSQL_ROOT_PASSWORD=123456
+    restart: 'always'
+    healthcheck:
+      test: [ "CMD", "mysqladmin", "ping", "-h", "localhost" ]
+      timeout: 10s
+      retries: 5
