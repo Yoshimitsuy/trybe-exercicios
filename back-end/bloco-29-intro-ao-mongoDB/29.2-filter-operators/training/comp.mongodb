@@ -1,0 +1,55 @@
+// prática: Operações de comparação
+
+// parte 1
+
+use('business');
+
+db.restaurants.countDocuments({});
+db.restaurants.find({});
+
+db.restaurants.countDocuments({ borough: { $in:[ "Queens", "Stanen Island", "Bronx" ]} }); // 1
+
+db.restaurants.countDocuments({ cuisine: { $ne:[ "American" ]} }); // 2
+
+db.restaurants.countDocuments({ rating: { $gte: 8 } }); // 3
+
+db.restaurants.countDocuments({ rating: { $lt: 4 } }); // 4
+
+db.restaurants.countDocuments({ rating: { $nin: [ 5, 6, 7 ] } }); // 5
+
+// parte 2
+
+db.restaurants.countDocuments({ rating: { $not: { $lte: 5} } }); // 1
+
+db.restaurants.countDocuments({ $or: [{ rating: { $gte: 6 } }, { borough: "Brooklyn" }] }); // 2
+
+db.restaurants.countDocuments({
+  $and: [ 
+    { borough: { $in: ["Queens", "Staten Island", "Brooklyn"] } },
+    { rating: { $gt: 4 } },
+  ], }); // 3
+
+db.restaurants.countDocuments({ $nor: [{ rating: 1 }, { cuisine: "American" }] }); // 4
+
+db.restaurants.countDocuments({
+  $and: [
+    { rating: { $gt: 6, $lt: 10 } },
+    {
+      $or: [
+        { borough: "Brooklyn" }, { cuisine: { $ne: "Delicatessen" } }
+      ] 
+    }
+  ]
+}); // 5
+
+// parte 3
+
+db.restaurants.find().sort({ name: 1 }); // 1
+
+db.restaurants.find({}, { rating: 1, name: 1}).sort({ rating: -1}); // 2
+
+// parte 4
+
+db.restaurants.deleteOne({ cuisine: "Ice Cream, Gelato, Yogurt, Ices" }); // 1
+
+db.restaurants.deleteMany({ cuisine: "American" }); // 2
