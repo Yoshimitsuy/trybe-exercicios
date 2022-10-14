@@ -1,0 +1,17 @@
+{
+  "_id": {
+    "$oid": "63487f477a7c58b5d25f37ce"
+  },
+  "name": "Abe Sapien",
+  "alignment": "good",
+  "gender": "Male",
+  "race": "Icthyo Sapien",
+  "aspects": {
+    "eyeColor": "blue",
+    "hairColor": "No Hair",
+    "skinColor": "blue",
+    "height": 191,
+    "weight": 29.48
+  },
+  "publisher": "Dark Horse Comics"
+}
