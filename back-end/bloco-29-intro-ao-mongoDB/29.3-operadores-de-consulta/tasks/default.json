@@ -1,0 +1,19 @@
+{
+  "_id": {
+    "$oid": "6349fa59622a2e1a1129c84d"
+  },
+  "title": "Batman",
+  "category": [
+    "action",
+    "adventure"
+  ],
+  "imdbRating": 7.7,
+  "budget": 35,
+  "ratings": [
+    85,
+    100,
+    102,
+    105
+  ],
+  "description": "The Dark Knight of Gotham City begins his war on crime with his first major enemy being Jack Napier, a criminal who becomes the clownishly homicidal Joker."
+}

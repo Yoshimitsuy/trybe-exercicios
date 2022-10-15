@@ -1,0 +1,35 @@
+use('cinema');
+
+// db.movies.findOne();
+
+// db.movies.find({ category: { $all: [ "action", "adventure" ] } }); // 1
+
+// db.movies.find({ category: { $all: [ "sci-fi", "action" ] }, imdbRating: { $gt: 7 } }); // 2
+
+// db.movies.find({ ratings: { $elemMatch: { $gte: 103 } } }, { title: 1, ratings: 1, _id: 0 }); // 3
+
+// db.movies.find({ ratings: { $elemMatch: { $gte: 100, $lte: 105 } } }, { title: 1, ratings: 1, _id: 0 }); // 4
+
+// db.movies.find({ 
+//   ratings: 
+//   { 
+//     $elemMatch: { $gte: 64, $lte: 105, $mod: [ 9, 0 ] } 
+//   } }, {
+//     title: 1,
+//     ratings: 1,
+//     _id: 0
+//   }); // 5
+
+// db.movies.find({
+//   category: "adventure",
+//   ratings: { $gt: 103 }
+// }, {
+//   title: 1,
+//   ratings: 1,
+//   category: 1,
+//   _id: 0
+// }); // 6
+
+// db.movies.find({ category: { $size: 2 } }, { title: 1, _id: 0 }); // 7
+
+db.movies.find({ ratings: { $size: 4 } }, { title: 1, _id: 0 }); // 8
