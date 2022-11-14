@@ -12,7 +12,7 @@ class Pokedex extends React.Component {
         {pokemons.map(bicho => (
         <Pokemon 
           key={bicho.id} 
-          bichinho={bicho} 
+          pokemonCard={ bicho } 
         />
 
         ))}
