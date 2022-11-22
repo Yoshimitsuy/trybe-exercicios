@@ -51,21 +51,24 @@ class App extends Component {
     return (
       <div className="App">
         <button 
-        style={ {backgroundColor: this.changeColor(pokeClick)} }
-        onClick={ this.handleClick }> 
-        {`Pokemon ${this.state.pokeClick}`} 
+          style={ {backgroundColor: this.changeColor(pokeClick)} }
+          onClick={ this.handleClick }
+          > 
+            {`Pokemon ${this.state.pokeClick}`} 
         </button> 
 
         <button 
-        style={ {backgroundColor: this.changeColor(digiClick)} }
-        onClick={ this.hcDigimon }> 
-        {`Digimon ${this.state.digiClick}`} 
+          style={ {backgroundColor: this.changeColor(digiClick)} }
+          onClick={ this.hcDigimon }
+          > 
+            {`Digimon ${this.state.digiClick}`} 
         </button>
 
         <button
-        style={ {backgroundColor: this.changeColor(cueClick)} }
-        onClick={ this.hcCuecmon }> 
-        {`Cuecmon ${this.state.cueClick}`} 
+          style={ {backgroundColor: this.changeColor(cueClick)} }
+          onClick={ this.hcCuecmon }
+          > 
+            {`Cuecmon ${this.state.cueClick}`} 
         </button>
       </div>
     );
