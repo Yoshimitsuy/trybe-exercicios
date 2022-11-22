@@ -8,14 +8,23 @@ export default class Form extends Component {
 
     this.state = {
       estadoFav: '',
+      idade: 0,
+      vai: false,
+      maior: false,
     }
   }
 
-  handleChange(e) {
+  handleChange({target}) {
+    const { name } = target;
+    const value = target.type === 'checkbox' ? target.checked : target.value;
+    
     this.setState({
-      estadoFav: e.target.value,
+      [name]: value
     })
-    console.log('log no event', e.target.value);
+    // console.log('log do value', e.target.value);
+    // console.log('log no name', e.target.name);
+    // console.log('log do type', e.target.type);
+    // console.log('log do target', e);
   }
 
   render() {
@@ -34,13 +43,20 @@ export default class Form extends Component {
           </label>
           
           <div>
-            <input type="number" name="idade" />
-            <input type="checkbox" name="vai" />
+            <input 
+              type="number"
+              name="idade"
+              onChange={ (e) => this.handleChange(e) }
+              min="12"
+              max="100"
+              placeholder="idade"
+            />
+            <input type="checkbox" name="vai" onChange={ (e) => this.handleChange(e) }/>
           </div>
 
           <div>
-            <select id="age" name="age" defaultValue="">
-              <option value="">select</option>
+            <select id="age" name="maior" defaultValue="" onChange={ (e) => this.handleChange(e) }>
+              <option value="" disabled="true">select</option>
               <option value="adult">+18</option>
               <option value="child">-18</option>
             </select>
