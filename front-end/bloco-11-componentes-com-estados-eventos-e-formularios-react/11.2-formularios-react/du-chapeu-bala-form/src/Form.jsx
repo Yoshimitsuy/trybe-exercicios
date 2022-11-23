@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import EstadoFavorito from'./EstadoFavorito';
 
 export default class Form extends Component {
   constructor() {
@@ -8,42 +9,42 @@ export default class Form extends Component {
 
     this.state = {
       estadoFav: '',
-      idade: 0,
+      idade: '',
       vai: false,
-      maior: false,
+      maior: '',
     }
   }
 
   handleChange({target}) {
+    // console.log(`comp pai ${target.value}`);
+
     const { name } = target;
     const value = target.type === 'checkbox' ? target.checked : target.value;
     
     this.setState({
       [name]: value
     })
-    // console.log('log do value', e.target.value);
-    // console.log('log no name', e.target.name);
-    // console.log('log do type', e.target.type);
+    // console.log('log do value', target.value);
+    // console.log('log no name', target.name);
+    // console.log('log do type', target.type);
     // console.log('log do target', e);
   }
 
   render() {
+    const { estadoFav, idade, vai, maior } = this.state
+
     return (
       <div>
         <div>Form</div>
         <form action="form">
-          
-          <label>
-            digite aqui uma porra
-              <textarea
-                name="estadoFav"
-                value={this.state.estadoFav}
-                onChange={ (e) => this.handleChange(e) }
-              />
-          </label>
-          
+          <EstadoFavorito
+            propFormValue={estadoFav}
+            formHandleChange={(e) => this.handleChange(e)}
+          />
+
           <div>
             <input 
+              value={idade}
               type="number"
               name="idade"
               onChange={ (e) => this.handleChange(e) }
@@ -51,15 +52,23 @@ export default class Form extends Component {
               max="100"
               placeholder="idade"
             />
-            <input type="checkbox" name="vai" onChange={ (e) => this.handleChange(e) }/>
+            <input value={vai}type="checkbox" name="vai" onChange={ (e) => this.handleChange(e) }/>
           </div>
 
           <div>
-            <select id="age" name="maior" defaultValue="" onChange={ (e) => this.handleChange(e) }>
-              <option value="" disabled="true">select</option>
+            <select
+              id="age"
+              name="maior"
+              onChange={ (e) => this.handleChange(e) } value={ maior }
+            >
+              <option value="" disabled={true}>select</option>
               <option value="adult">+18</option>
               <option value="child">-18</option>
             </select>
+          </div>
+
+          <div>
+            <input type="file" />
           </div>
 
         </form>
